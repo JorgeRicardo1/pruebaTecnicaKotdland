@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 body{
     padding: 0;
     margin: 0;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 * {
   font-family: 'Poppins', 'sans-serif';
@@ -12,7 +12,6 @@ body{
 /*--- Seccion header --- */
 .header__movile{
     display: block;
-    box-shadow: 0px 2px 5px #888888;
 }
 
 .header__movile__container{
@@ -33,18 +32,17 @@ body{
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
-    background: white;
+    right: 25%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     transform: translatex(-100%);
     transition: transform ease-out .3s;
+    background-color: #FFD49B;
 }
 
 .header__movile__sideMenu.active {
-    transform: translateX(0);
-    background-color: #FFD49B;
+    transform: translatex(0%);
+    
 }
 
 .header__movile__sideMenu__button{
@@ -56,6 +54,11 @@ body{
 .header__movile__sideMenu__list{
     list-style: none;
     padding: 0;
+    margin: 1em 1em;
+}
+
+.header__movile__sideMenu__item{
+    margin: 1em 0;
 }
 
 .header__movile__sideMenu__link{
@@ -65,8 +68,6 @@ body{
 
 .header__desktop{
     background-color: #FFBF69;
-    padding: 20px 0 10px 0;
-    box-shadow: 0px 2px 5px #888888;
     display: none;
     padding: 1em 4em;
 }
@@ -149,6 +150,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 0.5em;
 }
 
 .about__content__title{
@@ -198,6 +200,46 @@ body{
     width: 50%;
  }
 
+ /* -- section Informacion --- */
+ .information__content{
+    display: flex;
+    background-image: url(/images/bg-grid.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+.information__content__texts{
+    padding: 0 0.5em;
+}
+
+.information__content__texts__title{
+    font-weight: bold;
+}
+
+.information__content__img{
+    width: 0px;
+}
+
+/* section footer */
+.footer__content{
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.footer__content__item{
+    height: 65px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
 /* --- desktop ---  */
 @media screen and (min-width: 700px) {
     /*--- seccion header --- */
@@ -236,12 +278,54 @@ body{
         object-position: right ;
         height: 100%;
         width: 100%;
-    } 
+    }
+
+    /*--- seccion about --- */
+    .about__content{
+        padding: 1em 8em;
+    }
     
     /* seccion Products*/
     .products__content__list {
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
+    }
+
+     /* -- section Informacion --- */
+
+
+    .information__content{
+        background-size: 60%;
+        padding: 1em 4em;
+        background-position: center center;
+        align-items: center;
+     }
+
+    .information__content__texts{
+        padding: 0 1em;
+        flex: 2;
+    }
+
+    .information__content__img{
+        flex: 1;
+        padding: 0 3em 0 0;
+    }
+
+    /* section footer */
+    .footer__content{
+        background-color: #000000;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+
+    .footer__content__item{
+        height: 65px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
     }
   }
