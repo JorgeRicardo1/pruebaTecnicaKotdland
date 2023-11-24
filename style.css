@@ -1,0 +1,124 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+/*--- Seccion header --- */
+.header__movile{
+    display: block;
+    box-shadow: 0px 2px 5px #888888;
+}
+
+.header__movile__container{
+    padding: 1em;
+    background-color: #FFBF69;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+}
+
+.header__movile__button{
+    border: 0;
+    background: transparent;
+}
+
+.header__movile__sideMenu{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translatex(-100%);
+    transition: transform ease-out .3s;
+}
+
+.header__movile__sideMenu.active {
+    transform: translateX(0);
+    background-color: #FFD49B;
+}
+
+.header__movile__sideMenu__button{
+    padding: 10px 0 0 0;
+    border: 0;
+    background: transparent;
+}
+
+.header__movile__sideMenu__list{
+    list-style: none;
+    padding: 0;
+}
+
+.header__movile__sideMenu__link{
+    text-decoration: none; 
+    color: inherit;
+}
+
+.header__desktop{
+    background-color: #FFBF69;
+    padding: 20px 0 10px 0;
+    box-shadow: 0px 2px 5px #888888;
+    display: none;
+}
+
+.header__desktop__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em 0 1em;
+}
+
+.header__desktop__nav{
+    width: 300px;
+}
+
+.header__desktop__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header__desktop__link{
+    text-decoration: none; 
+    color: inherit;
+}
+.header__desktop__link:hover{
+    text-decoration: underline; 
+}
+
+/*--- Seccion introduccion --- */
+.introduccion__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.introduccion__content__texts{
+    width: 100%; 
+}
+.introduccion__content__images {
+    width: 100%;  
+}
+
+.introduccion__content__images img{
+    height: 50%;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .header__movile {
+      display: none;
+    }
+    .header__desktop {
+      display: block;
+    }
+
+    
+  }
